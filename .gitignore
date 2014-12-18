@@ -1,0 +1,17 @@
+*~
+.DS_Store
+.lein-deps-sum
+.lein-repl-history
+/pom.xml
+/pom.xml.asc
+/clojush*.jar
+classes/
+target/
+results/
+.classpath
+.project
+.settings/ccw.repl.cmdhistory.prefs
+/data/
+logs/
+lib/
+/bin
