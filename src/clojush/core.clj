@@ -1,4 +1,4 @@
-(ns clojure.core)
+(ns clojush.core)
         
 (require '[clojure.java.io :as io]
          '[clojure.data.csv :as csv])
@@ -15,9 +15,9 @@
 (defn parse-flt [s]
   (java.lang.Float/parseFloat s))
 
-(def data-vec ((with-open [in-file (io/reader "resources/beat.csv")]
+(def data-vec (with-open [in-file (io/reader "resources/beat.csv")]
   (doall
-     (csv/read-csv in-file)))
+     (csv/read-csv in-file))))
 
 (def data1 (vec (map (fn [v] (vec (map parse-flt v))) data-vec)))
 
@@ -57,7 +57,7 @@
 	                             (abs (- top-float output))
 	                             1000.0)))))
 	   
-	   :atom-generators (list (fn [] (- (lrand 15) (lrand 30)))
+	   :atom-generators (list (fn [] (- (lrand 15) (lrand 15)))
 	                          'in1
 	                          'float_div
 	                          'float_mult
